@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Socio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+            <nav class="navegador">
+                <ul class="navegador__list">
+                    <li class="navegador__item"><a href="index.html" class="navegador__enlace">Inicio</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Adopta</a></li>
+                    <li class="navegador__item"><a href="ayuda.html" class="navegador__enlace">Ayuda</a>
+                        <ul class="navegador__submenu">
+                            <li class="navegador__item-submenu"><a href="#" class="navegador__enlace">Voluntariado</a></li>
+                            <li class="navegador__item-submenu"><a href="#" class="navegador__enlace">Casa de acogida</a></li>
+                            <li class="navegador__item-submenu"><a href="socio.html" class="navegador__enlace">Hazte socio</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navegador__item">
+                        <a href="index.html" class="navegador__enlace"><img src="img/logo.png" alt="logo" class="navegador__logo"> </a>
+                    </li>
+                    <li class="navegador__item"><a href="slider.html" class="navegador__enlace">SLIDER</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Blog</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-movil">
+
+                <div class="navegador-mov">
+
+                    <div id="navegador-mov__sitios">
+                        <a href="ayuda.html" class="navegador-mov__enlace">Ayuda</a>
+                        <a href="acogida.html" class="navegador-mov__enlace">Casa de acogida</a>
+                        <a href="socio.html" class="navegador-mov__enlace">Socio</a>
+                    </div>
+                    <a href="javascript:void(0);" class="navegador-mov__enlace" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="boton-oscuro"><button class="boton-oscuro__btn" id="boton-oscuro__btn">Modo oscuro</button> </div>
+        </header>
+        <main class="container-3">
+            <section class="seccion1-socio">
+                <h1 class="seccion1-socio__titulo">HAZTE SOCIO</h1>
+            </section>
+            <section class="seccion2-socio">
+                <div class="seccion2-caja">
+                    <img srcset="./img/versiones/socio_cabecera-375w.jpg 375w,
+                                 ./img/versiones/socio_cabecera-768w.jpg 768w,
+                                 ./img/versiones/socio_cabecera-1024w.jpg 1024w" sizes="(max-width: 375px) 355px, (max-width: 768px) 748px, 1024px" src="./img/versiones/socio_cabecera-1024w.jpg" alt="Imagen socio" class="seccion-2__img">
+                </div>
+            </section>
+            <section class="seccion3-socio">
+                <h2 class="seccion3-socio__enunciado">Formulario para ser socio</h2>
+                <form action="/action_page.php" class="seccion3-socio__formulario">
+                    <input type="text" class="seccion3-socio__input" id="nombre" name="nombre" value="" placeholder="Nombre y apellidos" required>
+                    <input type="text" class="seccion3-socio__input" id="dni" name="dni" value="" placeholder="D.N.I." pattern="[0-9]{8}[A-Za-z]{1}" required>
+                    <input type="text" class="seccion3-socio__input" id="telef" name="telef" value="" placeholder="Teléfono" required>
+                    <input type="email" class="seccion3-socio__input" id="mail" name="mail" value="" placeholder="E-mail" required>
+                    <input type="text" class="seccion3-socio__input" id="direccion" name="direcciom" value="" placeholder="Dirección" maxlength="100">
+                    <input type="text" class="seccion3-socio__input" id="pob" name="pob" value="" placeholder="Población" required>
+                    <input type="text" class="seccion3-socio__input" id="provincia" name="provincia" value="" placeholder="Provincia" required>
+                    <input type="text" class="seccion3-socio__input" id="iban" name="iban" value="" placeholder="I.B.A.N." required>
+                    <div class="seccion3-socio__fin-formulario">
+                        <div class="seccion3-socio__radio">
+                            <h3 class="seccion3-socio__pago">Pago: </h3>
+                            <div class="seccion3-socio__forma-pago">
+                                <input type="radio" name="pago" id="radio" class="seccion3-socio__tipo-pago">Mensual
+                                <input type="radio" name="pago" id="radio" class="seccion3-socio__tipo-pago">Trimestral
+                                <input type="radio" name="pago" id="radio" class="seccion3-socio__tipo-pago">Anual
+                            </div>
+                        </div>
+                        <input type="submit" value="ENVIAR" class="seccion3-socio__btn-form">
+                    </div>
+
+                </form>
+            </section>
+        </main>
+        <footer class="pie">
+            <div class="pie__contenido">
+                <p class="pie__parrafo">@ 2020 Hashiko</p>
+                <ul class="pie__list">
+                    <li class="pie__item"><a href="#" class="pie__enlace">Politica de Privacidad   |</a></li>
+                    <li class="pie__item"><a href="#" class="pie__enlace">Aviso Legal   |</a> </li>
+                    <li class="pie__item"><a href="#" class="pie__enlace">Cookies</a> </li>
+                </ul>
+            </div>
+
+            <div class="pie__rrss">
+                <a href="https://es-es.facebook.com/" class="pie__enlace-rrss"><i class="fab fa-facebook pie__icono" id="facebook"></i></a>
+                <a href="https://www.instagram.com/?hl=es" [class]="pie__enlace-rrss"><i class="fab fa-instagram pie__icono" id="instagram"></i></a>
+            </div>
+
+        </footer>
+    </div>
+    <script>
+        const boscuro = document.querySelector('.boton-oscuro__btn');
+        const cuerpo = document.querySelector('body');
+
+        boscuro.addEventListener('click', e => {
+            cuerpo.classList.toggle('modoOscuro')
+        })
+
+        function myFunction() {
+            var x = document.getElementById("navegador-mov__sitios");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

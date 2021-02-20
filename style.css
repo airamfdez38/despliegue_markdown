@@ -1,0 +1,1283 @@
+/*-------------------------------
+VARIABLES
+-------------------------------*/
+
+ :root {
+    --azul: rgba(57, 184, 158, 0.6);
+    --naranja: rgb(242, 175, 88);
+    --letra: arial;
+    --letraCabeceras: 40px;
+    --boton: rgb(77, 172, 153);
+    --colorLetra: rgb(119, 114, 114);
+    --azulOscuro: rgb(42, 129, 112);
+    --fondoImputs: rgb(226, 182, 182);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-movil {
+    color: white;
+    background-color: transparent;
+    height: 100px;
+    margin: auto;
+}
+
+.navegador-mov {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background-color: transparent;
+    position: relative;
+}
+
+#navegador-mov__sitios {
+    display: none;
+}
+
+.navegador-mov__enlace {
+    color: var(--azulOscuro);
+    padding: 5px 5px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icon:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: transparent;
+    color: white;
+}
+
+.contenedor {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1440px;
+}
+
+
+/*--------- HEADER -----------*/
+
+.cabecera {
+    background: var(--azul);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.navegador {
+    margin: auto;
+    width: 90%;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+}
+
+.navegador__list {
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0%;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.navegador__item {
+    display: inline;
+    align-items: center;
+    padding-inline-start: 0%;
+}
+
+.navegador__enlace {
+    font-size: 14px;
+    text-decoration: none;
+    font-family: var(--letra);
+    color: white;
+}
+
+.navegador__enlace:hover {
+    color: var(--colorLetra);
+}
+
+.navegador__submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.navegador__item-submenu {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    color: var(--colorLetra);
+    font-family: var(--letra);
+    text-decoration: none;
+}
+
+.navegador__enlace-sub {
+    color: var(--colorLetra);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.navegador__item:hover .navegador__submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navegador__item-submenu {
+    color: var(--azulOscuro);
+}
+
+.navegador__logo {
+    width: 70px;
+    height: 70px;
+}
+
+.cabecera-movil {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boton-oscuro {
+    width: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.boton-oscuro__btn {
+    background: transparent;
+    color: white;
+    font-family: var(--letra);
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding-right: 10px;
+    height: 30px;
+}
+
+.modoOscuro {
+    background-color: rgb(59, 59, 73);
+    color: white;
+}
+
+
+/*-------- MAIN INICIO ---------*/
+
+.container-1 {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+}
+
+.seccion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.seccion__caja {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 70px;
+    padding-left: 80px;
+}
+
+.seccion__caja-titulo {
+    color: var(--azul);
+}
+
+.seccion__caja-parrafo {
+    color: var(--colorLetra);
+}
+
+.seccion__boton {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: left;
+}
+
+.seccion__boton-inicio {
+    flex-direction: row;
+    width: 120px;
+    background: var(--boton);
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.seccion__enlace {
+    text-decoration: none;
+    color: white;
+}
+
+.seccion__enlace:hover {
+    color: black;
+}
+
+.seccion__imagen {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.seccion__imagen-inicio {
+    padding-top: 40px;
+    width: 100%;
+}
+
+
+/*--------------------------
+TÍTULO
+---------------------------*/
+
+.seccion-2 {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seccion-2__titulo,
+.seccion-2__parrafo {
+    margin: 20px auto;
+}
+
+.seccion-2__titulo {
+    font-size: 42px;
+    font-weight: bolder;
+    color: var(--naranja);
+}
+
+.seccion-2__parrafo {
+    font-size: 30px;
+    color: var(--naranja);
+    padding-top: 0%;
+}
+
+
+/*--------------------------
+FOTOS PERROS/GATOS
+---------------------------*/
+
+.seccion-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.seccion-3__perros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.seccion-3__gatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.seccion-3__tarjeta {
+    display: flex;
+    width: 200px;
+    height: 300px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.seccion-3__texto-tarjeta {
+    width: 200px;
+    background-color: var(--naranja);
+    flex-direction: column-reverse;
+    padding-left: 5px;
+    color: white;
+}
+
+.seccion-3__parrafo-1 {
+    color: var(--azulOscuro);
+}
+
+.seccion-tarjeta1 {
+    background-image: url('./img/perroAdop1.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-tarjeta2 {
+    background-image: url('./img/perroAdop2.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-tarjeta3 {
+    background-image: url('./img/perroAdop3.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-tarjeta4 {
+    background-image: url('./img/gatoAdopt1.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-tarjeta5 {
+    background-image: url('./img/gatoAdopt2.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-tarjeta6 {
+    background-image: url('./img/gatoAdopt3.jpg');
+    background-repeat: no-repeat;
+}
+
+.seccion-3__btn-inicio-fin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.seccion-3__btn-texto {
+    flex-direction: row;
+    width: 120px;
+    background: var(--boton);
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.seccion-3__enlace {
+    text-decoration: none;
+    color: white;
+}
+
+.seccion-3__enlace:hover {
+    color: black;
+}
+
+
+/*---------------------------
+Main Ayuda
+----------------------------*/
+
+.container-2 {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 80px;
+    flex-direction: column;
+}
+
+.seccion-ayuda {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-items: center;
+}
+
+.seccion-ayuda__caja-imagen {
+    width: 50%;
+}
+
+.seccion-ayuda__img {
+    height: 350px;
+    width: 100%;
+}
+
+.seccion-ayuda__texto {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-inline-start: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-ayuda__titulo {
+    color: var(--azulOscuro);
+    margin-top: 30px;
+}
+
+.seccion-ayuda__parrafo {
+    width: 70%;
+    color: var(--colorLetra);
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+.seccion-ayuda__enlace {
+    text-decoration: none;
+    color: white;
+}
+
+.seccion-ayuda__enlace:hover {
+    color: black;
+}
+
+#seccion-ayuda__cajas {
+    width: 100%;
+    flex-direction: row-reverse;
+    display: flex;
+    justify-items: center;
+}
+
+.seccion-ayuda__btn-texto {
+    width: 150px;
+    background: var(--boton);
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+
+/*---------------------------
+Main Socio
+---------------------------*/
+
+.container-3 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.seccion1-socio {
+    background: var(--naranja);
+    height: 200px;
+    display: flex;
+}
+
+.seccion1-socio__titulo {
+    color: white;
+    font-size: var(--letraCabeceras);
+    font-weight: bold;
+    margin: auto;
+}
+
+.seccion-2__img {
+    width: 100%;
+}
+
+.seccion3-socio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.seccion3-socio__enunciado {
+    color: var(--azulOscuro);
+    margin-top: 0px;
+    padding-left: 80px;
+}
+
+.seccion3-socio__formulario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seccion3-socio__input {
+    color: var(--azulOscuro);
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+    background-color: var(--fondoImputs);
+    border: none;
+}
+
+.seccion3-socio__pago {
+    font-size: 10px;
+    color: var(--colorLetra);
+}
+
+.seccion3-socio__radio {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: left;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seccion3-socio__pago {
+    color: var(--azulOscuro);
+    width: 100%;
+}
+
+.seccion3-socio__forma-pago {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+    font-size: 10px;
+    color: var(--colorLetra);
+    font-family: var(--letra);
+}
+
+#radio {
+    width: 10px;
+}
+
+.seccion3-socio__fin-formulario {
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-left: 80px;
+    margin-left: -180px;
+}
+
+.seccion3-socio__btn-form {
+    width: 180px;
+    background: var(--boton);
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+/*------------------------------
+Main Casa de acogida
+------------------------------*/
+
+.container-4 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.seccion1-acogida {
+    background: var(--naranja);
+    height: 200px;
+    display: flex;
+}
+
+.seccion1-acogida__titulo {
+    color: white;
+    font-size: var(--letraCabeceras);
+    font-weight: bold;
+    margin: auto;
+}
+
+.seccion-2__img {
+    width: 100%;
+}
+
+.seccion3-acogida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+
+.seccion3-acogida__enunciado {
+    color: var(--azulOscuro);
+    margin-top: 0px;
+    padding-left: 80px;
+}
+
+.seccion3-acogida__formulario {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.seccion3-acogida__input {
+    color: var(--azulOscuro);
+    width: 500px;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+    background-color: var(--fondoImputs);
+    border: none;
+}
+
+.seccion3-acogida__pago {
+    font-size: 10px;
+    color: var(--colorLetra);
+}
+
+.seccion3-acogida__radio {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: left;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.seccion3-acogida__fin-formulario {
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-left: 80px;
+    margin-left: -180px;
+}
+
+.seccion3-acogida__btn-form {
+    width: 180px;
+    background: var(--boton);
+    border: none;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+
+/*FOOTER */
+
+.pie {
+    margin-top: -5px;
+    background: var(--azul);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.pie__contenido {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    justify-items: left;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.pie__parrafo {
+    padding-top: 2px;
+}
+
+.pie__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 0%;
+}
+
+.pie__item {
+    display: inline;
+    align-items: center;
+    padding-inline-start: 0%;
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+.pie__parrafo,
+.pie__enlace {
+    font-size: 10px;
+    text-decoration: none;
+    font-family: var(--letra);
+    color: var(--colorLetra);
+}
+
+.pie__enlace:hover {
+    color: white;
+}
+
+#facebook {
+    font-size: 20px;
+}
+
+#instagram {
+    font-size: 20px;
+}
+
+.pie__rrss {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 60px;
+    height: 30px;
+}
+
+
+/*---------------------------
+MEDIA QUERIES
+---------------------------*/
+
+@media only screen and (max-width:405px) {
+    /*--------- Ayuda------------*/
+    .cabecera {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .navegador {
+        display: none;
+    }
+    .boton-oscuro {
+        margin-left: 70%;
+    }
+    .boton-oscuro__btn {
+        width: 100px;
+        font-size: 70%;
+    }
+    .seccion {
+        flex-direction: column;
+    }
+    .seccion__caja {
+        width: 100%;
+        padding: 0%;
+    }
+    .seccion__caja-parrafo {
+        font-size: 80%;
+    }
+    .seccion__imagen {
+        width: 100%;
+    }
+    .seccion-2 {
+        width: 100%;
+    }
+    .seccion-2__titulo {
+        font-size: 30px;
+        margin: 10px auto;
+    }
+    .seccion-2__parrafo {
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    .seccion-3 {
+        padding-left: 15%;
+        margin: auto;
+    }
+    .seccion-3__perros,
+    .seccion-3__gatos {
+        flex-direction: column;
+    }
+    .seccion-3__tarjeta {
+        margin-bottom: 10px;
+        border: 2px solid var(--azulOscuro);
+    }
+    .seccion-3__btn-texto {
+        margin-left: -100px;
+    }
+    .pie {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pie__contenido {
+        width: 100%;
+    }
+    .pie__parrafo {
+        font-size: 60%;
+    }
+    /* Sitio Ayuda*/
+    .container_2 {
+        width: 100%;
+    }
+    .seccion-ayuda {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .seccion-ayuda__cajas {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .seccion-ayuda__caja-imagen {
+        width: 100%;
+    }
+    .seccion-ayuda__img {
+        margin: 0px auto;
+    }
+    .seccion-ayuda__texto {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #seccion-ayuda__cajas {
+        flex-direction: column-reverse;
+    }
+    /*Sitio socio*/
+    .container-3 {
+        width: 100%;
+    }
+    .seccion1-socio__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 10%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-socio {
+        padding-left: 1%;
+    }
+    .seccion3-socio__enunciado {
+        padding: 10px 10px;
+        font-size: 90%;
+    }
+    .seccion3-socio__input {
+        width: 75%;
+    }
+    .seccion3-socio__fin-formulario {
+        flex-direction: column;
+    }
+    .seccion3-socio__btn-form {
+        width: 40%;
+        height: 40px;
+        margin: 15px auto;
+    }
+    /* Sitio acogida*/
+    .container-4 {
+        width: 100%;
+    }
+    .seccion1-acogida__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 10%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-acogida {
+        padding-left: 1%;
+    }
+    .seccion3-acogida__enunciado {
+        padding: 10px 10px;
+        font-size: 90%;
+    }
+    .seccion3-acogida__input {
+        width: 75%;
+    }
+    .seccion3-acogida__fin-formulario {
+        flex-direction: column;
+    }
+    .seccion3-acogida__btn-form {
+        width: 40%;
+        height: 40px;
+        margin: 15px auto;
+    }
+}
+
+@media only screen and (min-width: 406px) and (max-width: 469px) {
+    .cabecera {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    .navegador {
+        display: none;
+    }
+    .boton-oscuro {
+        margin-left: 70%;
+        width: 120px;
+    }
+    .boton-oscuro__btn {
+        font-size: 80%;
+        margin-left: 10px;
+    }
+    .seccion {
+        flex-direction: column;
+    }
+    .seccion__caja {
+        width: 100%;
+        padding: 0px;
+    }
+    .seccion__caja-parrafo {
+        font-size: 80%;
+    }
+    .seccion__imagen {
+        width: 100%;
+    }
+    .seccion-2 {
+        width: 100%;
+    }
+    .seccion-2__titulo {
+        font-size: 30px;
+        margin: 10px auto;
+    }
+    .seccion-2__parrafo {
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    .seccion-3 {
+        padding-left: 15%;
+        margin: auto;
+    }
+    .seccion-3__perros,
+    .seccion-3__gatos {
+        flex-direction: column;
+    }
+    .seccion-3__tarjeta {
+        margin-bottom: 10px;
+        border: 2px solid var(--azulOscuro);
+    }
+    .seccion-3__btn-texto {
+        margin-left: -100px;
+    }
+    /*--------- Ayuda------------*/
+    .container_2 {
+        width: 100%;
+    }
+    .seccion-ayuda {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .seccion-ayuda__cajas {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .seccion-ayuda__caja-imagen {
+        width: 100%;
+    }
+    .seccion-ayuda__img {
+        margin: 0px auto;
+    }
+    .seccion-ayuda__texto {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #seccion-ayuda__cajas {
+        flex-direction: column-reverse;
+    }
+    /* Sitio socios*/
+    .seccion1-socio__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 18%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-socio {
+        padding-left: 1%;
+    }
+    .seccion3-socio__enunciado {
+        padding: 10px 10px;
+        font-size: 90%;
+    }
+    .seccion3-socio__input {
+        width: 75%;
+    }
+    .seccion3-socio__fin-formulario {
+        flex-direction: column;
+    }
+    .seccion3-socio__btn-form {
+        width: 40%;
+        height: 40px;
+        margin: 15px auto;
+    }
+    /* Sitio Casa Acogida */
+    .seccion1-acogida__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 18%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-acogida {
+        padding-left: 1%;
+    }
+    .seccion3-acogida__enunciado {
+        padding: 10px 10px;
+        font-size: 90%;
+    }
+    .seccion3-acogida__input {
+        width: 75%;
+    }
+    .seccion3-acogida__fin-formulario {
+        flex-direction: column;
+    }
+    .seccion3-acogida__btn-form {
+        width: 40%;
+        height: 40px;
+        margin: 15px auto;
+    }
+}
+
+@media only screen and (min-width: 470px) and (max-width: 768px) {
+    .navegador {
+        display: none;
+    }
+    .cabecera {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .boton-oscuro {
+        margin-left: 55%;
+        width: 120px;
+    }
+    .boton-oscuro__btn {
+        font-size: 80%;
+        margin-left: 5px;
+    }
+    .seccion {
+        flex-direction: column;
+    }
+    .seccion__caja {
+        width: 100%;
+        padding: 0px
+    }
+    .seccion__caja-titulo {
+        padding-left: 30%;
+    }
+    .seccion__caja-parrafo {
+        font-size: 90%;
+    }
+    .seccion__boton {
+        justify-content: center;
+    }
+    .seccion__imagen {
+        width: 100%;
+    }
+    .seccion-2 {
+        width: 100%;
+    }
+    .seccion-2__titulo {
+        font-size: 36px;
+        margin: 10px auto;
+    }
+    .seccion-2__parrafo {
+        font-size: 26px;
+        margin: 0 auto;
+    }
+    .seccion-3__perros,
+    .seccion-3__gatos {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .seccion-3__tarjeta {
+        margin: 10px auto;
+        border: 2px solid var(--azulOscuro);
+    }
+    .seccion-3__btn-texto {
+        margin: auto;
+    }
+    /* Sitio ayuda*/
+    .container_2 {
+        width: 100%;
+    }
+    .seccion-ayuda {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+    .seccion-ayuda__cajas {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .seccion-ayuda__caja-imagen {
+        width: 100%;
+    }
+    .seccion-ayuda__img {
+        margin: 0px auto;
+    }
+    .seccion-ayuda__texto {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #seccion-ayuda__cajas {
+        flex-direction: column-reverse;
+    }
+    /* Sitio socio*/
+    .seccion1-socio__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 20%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-socio {
+        padding-left: 1%;
+    }
+    .seccion3-socio__enunciado {
+        padding: 10px 10px;
+        font-size: 90%;
+    }
+    .seccion3-socio__input {
+        width: 75%;
+    }
+    .seccion3-socio__fin-formulario {
+        flex-direction: column;
+    }
+    .seccion3-socio__btn-form {
+        width: 40%;
+        height: 40px;
+        margin: 10%
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .menu-movil {
+        display: none;
+    }
+    .navegador {
+        margin: auto;
+        width: 200px;
+    }
+    .navegador__item {
+        margin-left: 5px;
+    }
+    .boton-oscuro {
+        width: 120px;
+    }
+    .boton-oscuro__btn {
+        font-size: 80%;
+        margin-left: 10px;
+    }
+    .seccion {
+        flex-direction: row;
+    }
+    .seccion__caja {
+        width: 40%;
+        padding: 0px;
+    }
+    .seccion__caja-titulo {
+        margin: 40px auto 20px;
+    }
+    .seccion__caja-parrafo {
+        font-size: 90%;
+    }
+    .seccion__boton {
+        justify-content: left;
+    }
+    .seccion__imagen {
+        width: 60%;
+    }
+    .seccion-2 {
+        width: 100%;
+    }
+    .seccion-2__titulo {
+        font-size: 36px;
+        margin: 30px auto;
+    }
+    .seccion-2__parrafo {
+        font-size: 26px;
+        margin: 0 auto;
+    }
+    .seccion-3__perros,
+    .seccion-3__gatos {
+        flex-direction: row;
+    }
+    .seccion-3__tarjeta {
+        margin: 10px;
+        border: 2px solid var(--azulOscuro);
+    }
+    .seccion-3__btn-texto {
+        margin-left: -80px;
+    }
+    /* Sitio Socio*/
+    .seccion1-socio__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 30%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-socio {
+        padding-left: 1%;
+        margin: auto;
+    }
+    .seccion3-socio__enunciado {
+        padding: 20px 10px;
+        font-size: 90%;
+    }
+    .seccion3-socio__input {
+        width: 75%;
+    }
+    .seccion3-socio__fin-formulario {
+        flex-direction: row;
+    }
+    .seccion3-socio__btn-form {
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .menu-movil {
+        display: none;
+    }
+    .seccion1-socio__titulo {
+        width: 100%;
+        margin: auto;
+        padding-left: 40%;
+    }
+    .seccion-2__img {
+        width: 100%;
+    }
+    .seccion3-socio {
+        padding-left: 1%;
+        margin: 120px auto;
+    }
+    .seccion3-socio__enunciado {
+        padding: 20px 30px;
+        font-size: 100%;
+    }
+    .seccion3-socio__fin-formulario {
+        flex-direction: row;
+    }
+    .seccion3-socio__btn-form {
+        height: 40px;
+    }
+}
