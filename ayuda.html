@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Ayuda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="cabecera">
+            <nav class="navegador">
+                <ul class="navegador__list">
+                    <li class="navegador__item"><a href="index.html" class="navegador__enlace">Inicio</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Adopta</a></li>
+                    <li class="navegador__item"><a href="ayuda.html" class="navegador__enlace">Ayuda</a>
+                        <ul class="navegador__submenu">
+                            <li class="navegador__item-submenu"><a href="#" class="navegador__enlace">Voluntariado</a></li>
+                            <li class="navegador__item-submenu"><a href="#" class="navegador__enlace">Casa de acogida</a></li>
+                            <li class="navegador__item-submenu"><a href="socio.html" class="navegador__enlace">Hazte socio</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navegador__item">
+                        <a href="index.html" class="navegador__enlace"><img src="img/logo.png" alt="logo" class="navegador__logo"> </a>
+                    </li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">SLIDER</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Blog</a></li>
+                    <li class="navegador__item"><a href="#" class="navegador__enlace">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-movil">
+
+                <div class="navegador-mov">
+
+                    <div id="navegador-mov__sitios">
+                        <a href="ayuda.html" class="navegador-mov__enlace">Ayuda</a>
+                        <a href="acogida.html" class="navegador-mov__enlace">Casa de acogida</a>
+                        <a href="socio.html" class="navegador-mov__enlace">Socio</a>
+                    </div>
+                    <a href="javascript:void(0);" class="navegador-mov__enlace" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="boton-oscuro"><button class="boton-oscuro__btn" id="boton-oscuro__btn">Modo oscuro</button> </div>
+        </header>
+        <main class="container_2">
+            <section class="seccion-ayuda">
+                <div class="seccion-ayuda__caja-imagen">
+                    <img srcset="./img/versiones/Voluntariado-375w.jpg 375w,
+                                 ./img/versiones/Voluntariado-768w.jpg 768w,
+                                 ./img/versiones/Voluntariado-1024w.jpg 1024w" sizes="(max-width: 375px) 355px, (max-width: 768px) 748px, 1024px" src="./img/versiones/Voluntariado-1024w.jpg" alt="voluntariado" class="seccion-ayuda__img">
+                </div>
+                <div class="seccion-ayuda__texto">
+                    <h2 class="seccion-ayuda__titulo">VOLUNTARIADO</h2>
+                    <p class="seccion-ayuda__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit explicabo aperiam itaque quaerat cum sequi perferendis, porro quos! Modi nihil quis voluptas optio! Dolorem ducimus, aspernatur facilis aliquid recusandae unde?</p>
+                    <div class="seccion-ayuda__boton">
+                        <button type="button" class="seccion-ayuda__btn-texto"><a href="voluntariado.html" class="seccion-ayuda__enlace">VOLUNTARIADO</a></button>
+                    </div>
+                </div>
+            </section>
+            <section class="seccion-ayuda" id="seccion-ayuda__cajas">
+                <div class="seccion-ayuda__caja-imagen">
+                    <img srcset="./img/versiones/casa-acog-375w.jpg 375w,
+                                 ./img/versiones/casa-acog-768w.jpg 768w,
+                                 ./img/versiones/casa-acog-1024w.jpg 1024w" sizes="(max-width: 375px) 355px, (max-width: 768px) 748px, 1024px" src="./img/versiones/casa-acog-1024w.jpg" alt="Casa de acogida" class="seccion-ayuda__img">
+                </div>
+                <div class="seccion-ayuda__texto">
+                    <h2 class="seccion-ayuda__titulo">CASA DE ACOGIDA</h2>
+                    <p class="seccion-ayuda__parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae culpa quis quam ad sunt ea sequi, numquam aliquid id eum et cum voluptatum. Ipsum nihil veniam, libero repudiandae dolorum voluptatem.</p>
+                    <div class="seccion-ayuda__boton">
+                        <button type="button" class="seccion-ayuda__btn-texto"><a href="acogida.html" class="seccion-ayuda__enlace">CASA ACOGIDA</a></button>
+                    </div>
+                </div>
+            </section>
+            <section class="seccion-ayuda">
+                <div class="seccion-ayuda__caja-imagen">
+                    <img srcset="./img/versiones/socio-375w.jpg 375w,
+                                 ./img/versiones/socio-768w.jpg 768w,
+                                 ./img/versiones/socio-1024w.jpg 1024w" sizes="(max-width: 375px) 355px, (max-width: 768px) 748px, 1024px" src="./img/versiones/socio-1024w.jpg" alt="Socio" class="seccion-ayuda__img">
+                </div>
+                <div class="seccion-ayuda__texto">
+                    <h2 class="seccion-ayuda__titulo">SOCIOS</h2>
+                    <p class="seccion-ayuda__parrafo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo reprehenderit itaque fugit dignissimos fuga veritatis, at earum soluta maiores nobis odio, libero placeat provident est amet necessitatibus quis! Fuga, quibusdam!</p>
+                    <div>
+                        <button type="button" class="seccion-ayuda__btn-texto"><a href="socio.html" class="seccion-ayuda__enlace">SOCIO</a></button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="pie">
+            <div class="pie__contenido">
+                <p class="pie__parrafo">@ 2020 Hashiko</p>
+                <ul class="pie__list">
+                    <li class="pie__item"><a href="#" class="pie__enlace">Politica de Privacidad   |</a></li>
+                    <li class="pie__item"><a href="#" class="pie__enlace">Aviso Legal   |</a> </li>
+                    <li class="pie__item"><a href="#" class="pie__enlace">Cookies</a> </li>
+                </ul>
+            </div>
+
+            <div class="pie__rrss">
+                <a href="https://es-es.facebook.com/" class="pie__enlace-rrss"><i class="fab fa-facebook pie__icono" id="facebook"></i></a>
+                <a href="https://www.instagram.com/?hl=es" [class]="pie__enlace-rrss"><i class="fab fa-instagram pie__icono" id="instagram"></i></a>
+            </div>
+
+        </footer>
+    </div>
+</body>
+<script>
+    const boscuro = document.querySelector('.boton-oscuro__btn');
+    const cuerpo = document.querySelector('body');
+
+    boscuro.addEventListener('click', e => {
+        cuerpo.classList.toggle('modoOscuro')
+    })
+
+    function myFunction() {
+        var x = document.getElementById("navegador-mov__sitios");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</html>
